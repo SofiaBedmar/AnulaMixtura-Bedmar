@@ -155,11 +155,6 @@ margin: 15px;
     display: flex;
 }
 
-.la_ventana_indiscreta{
-    width: 300px;
-    height: 200px;
-    display: flex;
-}
 
 .rutinas_envasadas{
     width: 300px;
@@ -189,6 +184,35 @@ margin: 15px;
     width: 300px;
     height: 200px;
     display: flex;
+}
+
+.la_ventana_indiscreta{
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
+
+.sweet__picnic{
+    width: 300px;
+    height: 200px;
+    display: flex;
+
+}
+
+.SweetPicnic__hover{
+    width: 300px;
+    background: radial-gradient(#111 50%, #000 100%);
+    overflow: hidden;
+}
+
+.SweetPicnic__hover img{
+    transform: scale(1.3);
+    transition: all 0.3s ease-out;
+}
+
+.SweetPicnic__hover:hover img{
+    transform: scale(1.1) translateY(-20px);
+    opacity: 0.3;
 }
 
 /* @media screen and (768px) {
