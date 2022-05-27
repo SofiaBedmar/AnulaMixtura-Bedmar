@@ -1,6 +1,14 @@
 /*--------------Selector Universal----------------*/
 
-*{
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,8 +31,9 @@
 body{
     font-family: "Futura";
     min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+/*------rompe algunos elementos-------
+     display: flex;
+    flex-wrap: wrap; */
 }
 
 /*-------------------header en general---------------*/
@@ -105,7 +114,7 @@ margin: 15px;
 
 /*-------------------sección index---------------------*/
 
-.imgContainer{
+/* .imgContainer{
     height: 80vh;
     width: 100vw;
 }
@@ -126,6 +135,96 @@ margin: 15px;
     flex-direction: column;
 }
     
+} */
+
+main 
+{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+section 
+{
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+section h1
+{
+  text-align: center;
+  font-size: 4rem;
+  font-family: "futura bold";
+}
+
+.no-parallax 
+{
+  background-color: #000;
+  z-index: 999;
+  display: flex;
+  gap: 100px;
+}
+
+.parallax h1 
+{
+  width: 60%;
+  font-size: 2rem;
+}
+
+.parallax::after 
+{
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after 
+{
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/pink\ foodies.jpg");
+  background-size: cover;
+}
+
+section img{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) 
+{
+  section h1 
+  {
+    font-size: 8rem;
+  }
+  
+  .parallax h1 
+  {
+    font-size: 4rem;
+  }
+
+}
+
+@media (max-width: 768px)
+{
+    section img{
+        width: 80px;
+        height: 80px;
+    }
 }
 
 /*------------------sección Work------------------------*/
