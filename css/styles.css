@@ -1,6 +1,14 @@
 /*--------------Selector Universal----------------*/
 
-*{
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,8 +31,9 @@
 body{
     font-family: "Futura";
     min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+/*------rompe algunos elementos-------
+     display: flex;
+    flex-wrap: wrap; */
 }
 
 /*-------------------header en general---------------*/
@@ -105,7 +114,7 @@ margin: 15px;
 
 /*-------------------sección index---------------------*/
 
-.imgContainer{
+/* .imgContainer{
     height: 80vh;
     width: 100vw;
 }
@@ -126,6 +135,102 @@ margin: 15px;
     flex-direction: column;
 }
     
+} */
+
+main 
+{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+section 
+{
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+section h1
+{
+  text-align: center;
+  font-size: 4rem;
+  font-family: "futura bold";
+}
+
+.no-parallax 
+{
+  background-color: #000;
+  z-index: 999;
+  display: flex;
+  gap: 100px;
+}
+
+.parallax h1 
+{
+  width: 60%;
+  font-size: 2rem;
+}
+
+.parallax::after 
+{
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after 
+{
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/pink\ foodies.jpg");
+  background-size: cover;
+}
+
+/* section img{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+section .btn{
+    color: #FFF;
+    font-family: "futura bold";
+    font-size: 80px;
+}
+
+@media screen and (min-width: 768px) 
+{
+  section h1 
+  {
+    font-size: 8rem;
+  }
+  
+  .parallax h1 
+  {
+    font-size: 4rem;
+  }
+
+}
+
+@media (max-width: 768px)
+{
+    section img{
+        width: 80px;
+        height: 80px;
+    }
 }
 
 /*------------------sección Work------------------------*/
@@ -136,20 +241,31 @@ margin: 15px;
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 5px 0px 10px 0px;
+    padding: 40px 0px 10px 0px;
 }
 
-.contenido__work{
- display: flex;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
-}
-.contenido__work > img{
-    padding: 10px;
+section .contenido__work{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.homeplanning{
+section img{
+    width: 200px;
+    height: 200px;
+    padding: 0px 10px 10px 10px;
+}
+
+@media (min-width 768px) {
+    .contenido__work {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-rows: 20px 20px 20px 20px;
+    }  
+}
+
+/* .homeplanning{
     width: 300px;
     height: 200px;
     display: flex;
@@ -197,9 +313,9 @@ margin: 15px;
     height: 200px;
     display: flex;
 
-}
+} */
 
-.SweetPicnic__hover{
+/* .SweetPicnic__hover{
     width: 300px;
     background: radial-gradient(#111 50%, #000 100%);
     overflow: hidden;
@@ -213,7 +329,7 @@ margin: 15px;
 .SweetPicnic__hover:hover img{
     transform: scale(1.1) translateY(-20px);
     opacity: 0.3;
-}
+} */
 
 /* @media screen and (768px) {
     .contenido__work {
