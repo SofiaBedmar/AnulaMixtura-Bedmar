@@ -196,13 +196,19 @@ section h1
   background-size: cover;
 }
 
-section img{
+/* section img{
     width: 200px;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+} */
+
+section .btn{
+    color: #FFF;
+    font-family: "futura bold";
+    font-size: 80px;
 }
 
 @media screen and (min-width: 768px) 
@@ -235,20 +241,31 @@ section img{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 5px 0px 10px 0px;
+    padding: 40px 0px 10px 0px;
 }
 
-.contenido__work{
- display: flex;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
-}
-.contenido__work > img{
-    padding: 10px;
+section .contenido__work{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.homeplanning{
+section img{
+    width: 200px;
+    height: 200px;
+    padding: 0px 10px 10px 10px;
+}
+
+@media (min-width 768px) {
+    .contenido__work {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-rows: 20px 20px 20px 20px;
+    }  
+}
+
+/* .homeplanning{
     width: 300px;
     height: 200px;
     display: flex;
@@ -296,9 +313,9 @@ section img{
     height: 200px;
     display: flex;
 
-}
+} */
 
-.SweetPicnic__hover{
+/* .SweetPicnic__hover{
     width: 300px;
     background: radial-gradient(#111 50%, #000 100%);
     overflow: hidden;
@@ -312,7 +329,7 @@ section img{
 .SweetPicnic__hover:hover img{
     transform: scale(1.1) translateY(-20px);
     opacity: 0.3;
-}
+} */
 
 /* @media screen and (768px) {
     .contenido__work {
