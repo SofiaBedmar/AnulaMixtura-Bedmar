@@ -1,0 +1,21 @@
+footer{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-self: flex-end;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo__footer{
+    font-size: 14px;
+}
+
+@media(max-width:768px) {
+    .titulo__footer{
+        font-size: 13px;
+    
+    }
+}
