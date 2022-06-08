@@ -19,3 +19,13 @@ footer{
     
     }
 }
+
+$redes:(fb:#3a5795,insta:#990088,tw:#55acee,bh:#000);
+
+
+
+@each $red, $color in $redes {
+    .#{$red}-btn {
+        background-color: $color;
+    }
+ }

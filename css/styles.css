@@ -56,6 +56,18 @@ footer {
   .titulo__footer {
     font-size: 13px; } }
 
+.fb-btn {
+  background-color: #3a5795; }
+
+.insta-btn {
+  background-color: #990088; }
+
+.tw-btn {
+  background-color: #55acee; }
+
+.bh-btn {
+  background-color: #000; }
+
 /* index */
 main {
   height: 100vh;
